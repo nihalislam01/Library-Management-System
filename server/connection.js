@@ -3,7 +3,8 @@ require('dotenv').config();
 
 // const fs = require('fs');
 // const sqlFilePath = './table.sql';
-// const sqlCommands = fs.readFileSync(sqlFilePath, 'utf-8');
+// const sqlFile = fs.readFileSync(sqlFilePath, 'utf-8');
+// const sqlCommands = sqlFile.split(';').filter(command => command.trim());
 
 var connection = mysql.createConnection({
     port: process.env.DB_PORT,
@@ -22,12 +23,8 @@ connection.connect((err) =>{
     }
 })
 
-// connection.query(sqlCommands, (err, results) => {
-//     if (err) {
-//         console.log(err);
-//         return;
-//     }
-//     connection.end();
-// })
+// for (const command of sqlCommands) {
+//     connection.query(command);
+// }
 
 module.exports = connection;
