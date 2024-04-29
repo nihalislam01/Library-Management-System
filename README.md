@@ -9,7 +9,8 @@ Tools: NodeJS, ExpressJS, ReactJS, MySQL
 # Default Admin
 
 Email: admin1@gmail.com
-Default Admin Password: 12345
+
+Password: 12345
 
 
 run server side API's on localhost port 8080
