@@ -10,3 +10,6 @@ http://localhost:8080
 
 run client side API's on localhost port 3000
 http://localhost:3000
+
+Default Admin Email: admin1@gmail.com
+Default Admin Password: 12345
